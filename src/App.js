@@ -3,7 +3,14 @@ import Sidebar from "./Sidebar";
 
 import "./styles/css.css";
 import "./styles/w3.css";
+import Contact from "./components/contact/index.js";
+import First from "./components/first/index.js";
+import Footer from "./components/footer/index.js";
+import Header from "./components/header/index.js";
+import Images from "./components/images/index.js";
 import Menu from "./components/menu/index.js";
+import Pagination from "./components/pagination/index.js";
+import Second from "./components/second/index.js";
 
 function App() {
   return (
@@ -21,196 +28,15 @@ function App() {
       {/* !PAGE CONTENT! */}
       <div className="w3-main" style={{ marginLeft: 300 }}>
         {/* Header */}
-        <header id="portfolio">
-          <a href="#">
-            <img
-              src="https://www.w3schools.com/w3images/avatar_g2.jpg"
-              style={{ width: 65 }}
-              className="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"
-            />
-          </a>
-          <span
-            className="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey"
-            onclick="w3_open()"
-          >
-            <i className="fa fa-bars" />
-          </span>
-          <div className="w3-container">
-            <h1>
-              <b>My Portfolio</b>
-            </h1>
-            <div className="w3-section w3-bottombar w3-padding-16">
-              <span className="w3-margin-right">Filter:</span>
-              <button className="w3-button w3-black">ALL</button>
-              <button className="w3-button w3-white">
-                <i className="fa fa-diamond w3-margin-right" />
-                Design
-              </button>
-              <button className="w3-button w3-white w3-hide-small">
-                <i className="fa fa-photo w3-margin-right" />
-                Photos
-              </button>
-              <button className="w3-button w3-white w3-hide-small">
-                <i className="fa fa-map-pin w3-margin-right" />
-                Art
-              </button>
-            </div>
-          </div>
-        </header>
+        <Header />
         {/* First Photo Grid*/}
-        <div className="w3-row-padding">
-          <div className="w3-third w3-container w3-margin-bottom">
-            <img
-              src="https://www.w3schools.com/w3images/mountains.jpg"
-              alt="Norway"
-              style={{ width: "100%" }}
-              className="w3-hover-opacity"
-            />
-            <div className="w3-container w3-white">
-              <p>
-                <b>Lorem Ipsum</b>
-              </p>
-              <p>
-                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                condimentum, porta lectus vitae, ultricies congue gravida diam
-                non fringilla.
-              </p>
-            </div>
-          </div>
-          <div className="w3-third w3-container w3-margin-bottom">
-            <img
-              src="https://www.w3schools.com/w3images/lights.jpg"
-              alt="Norway"
-              style={{ width: "100%" }}
-              className="w3-hover-opacity"
-            />
-            <div className="w3-container w3-white">
-              <p>
-                <b>Lorem Ipsum</b>
-              </p>
-              <p>
-                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                condimentum, porta lectus vitae, ultricies congue gravida diam
-                non fringilla.
-              </p>
-            </div>
-          </div>
-          <div className="w3-third w3-container">
-            <img
-              src="https://www.w3schools.com/w3images/nature.jpg"
-              alt="Norway"
-              style={{ width: "100%" }}
-              className="w3-hover-opacity"
-            />
-            <div className="w3-container w3-white">
-              <p>
-                <b>Lorem Ipsum</b>
-              </p>
-              <p>
-                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                condimentum, porta lectus vitae, ultricies congue gravida diam
-                non fringilla.
-              </p>
-            </div>
-          </div>
-        </div>
+        <First />
         {/* Second Photo Grid*/}
-        <div className="w3-row-padding">
-          <div className="w3-third w3-container w3-margin-bottom">
-            <img
-              src="https://www.w3schools.com/w3images/p1.jpg"
-              alt="Norway"
-              style={{ width: "100%" }}
-              className="w3-hover-opacity"
-            />
-            <div className="w3-container w3-white">
-              <p>
-                <b>Lorem Ipsum</b>
-              </p>
-              <p>
-                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                condimentum, porta lectus vitae, ultricies congue gravida diam
-                non fringilla.
-              </p>
-            </div>
-          </div>
-          <div className="w3-third w3-container w3-margin-bottom">
-            <img
-              src="https://www.w3schools.com/w3images/p2.jpg"
-              alt="Norway"
-              style={{ width: "100%" }}
-              className="w3-hover-opacity"
-            />
-            <div className="w3-container w3-white">
-              <p>
-                <b>Lorem Ipsum</b>
-              </p>
-              <p>
-                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                condimentum, porta lectus vitae, ultricies congue gravida diam
-                non fringilla.
-              </p>
-            </div>
-          </div>
-          <div className="w3-third w3-container">
-            <img
-              src="https://www.w3schools.com/w3images/p3.jpg"
-              alt="Norway"
-              style={{ width: "100%" }}
-              className="w3-hover-opacity"
-            />
-            <div className="w3-container w3-white">
-              <p>
-                <b>Lorem Ipsum</b>
-              </p>
-              <p>
-                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                condimentum, porta lectus vitae, ultricies congue gravida diam
-                non fringilla.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Second />
         {/* Pagination */}
-        <div className="w3-center w3-padding-32">
-          <div className="w3-bar">
-            <a href="#" className="w3-bar-item w3-button w3-hover-black">
-              «
-            </a>
-            <a href="#" className="w3-bar-item w3-black w3-button">
-              1
-            </a>
-            <a href="#" className="w3-bar-item w3-button w3-hover-black">
-              2
-            </a>
-            <a href="#" className="w3-bar-item w3-button w3-hover-black">
-              3
-            </a>
-            <a href="#" className="w3-bar-item w3-button w3-hover-black">
-              4
-            </a>
-            <a href="#" className="w3-bar-item w3-button w3-hover-black">
-              »
-            </a>
-          </div>
-        </div>
+        <Pagination />
         {/* Images of Me */}
-        <div className="w3-row-padding w3-padding-16" id="about">
-          <div className="w3-col m6">
-            <img
-              src="https://www.w3schools.com/w3images/avatar_g.jpg"
-              alt="Me"
-              style={{ width: "100%" }}
-            />
-          </div>
-          <div className="w3-col m6">
-            <img
-              src="https://www.w3schools.com/w3images/me2.jpg"
-              alt="Me"
-              style={{ width: "100%" }}
-            />
-          </div>
-        </div>
+        <Images />
         <div
           className="w3-container w3-padding-large"
           style={{ marginBottom: 32 }}
@@ -324,163 +150,9 @@ function App() {
           </div>
         </div>
         {/* Contact Section */}
-        <div className="w3-container w3-padding-large w3-grey">
-          <h4 id="contact">
-            <b>Contact Me</b>
-          </h4>
-          <div
-            className="w3-row-padding w3-center w3-padding-24"
-            style={{ margin: "0 -16px" }}
-          >
-            <div className="w3-third w3-dark-grey">
-              <p>
-                <i className="fa fa-envelope w3-xxlarge w3-text-light-grey" />
-              </p>
-              <p>email@email.com</p>
-            </div>
-            <div className="w3-third w3-teal">
-              <p>
-                <i className="fa fa-map-marker w3-xxlarge w3-text-light-grey" />
-              </p>
-              <p>Chicago, US</p>
-            </div>
-            <div className="w3-third w3-dark-grey">
-              <p>
-                <i className="fa fa-phone w3-xxlarge w3-text-light-grey" />
-              </p>
-              <p>512312311</p>
-            </div>
-          </div>
-          <hr className="w3-opacity" />
-          <form action="/action_page.php" target="_blank">
-            <div className="w3-section">
-              <label>Name</label>
-              <input
-                className="w3-input w3-border"
-                type="text"
-                name="Name"
-                required=""
-              />
-            </div>
-            <div className="w3-section">
-              <label>Email</label>
-              <input
-                className="w3-input w3-border"
-                type="text"
-                name="Email"
-                required=""
-              />
-            </div>
-            <div className="w3-section">
-              <label>Message</label>
-              <input
-                className="w3-input w3-border"
-                type="text"
-                name="Message"
-                required=""
-              />
-            </div>
-            <button
-              type="submit"
-              className="w3-button w3-black w3-margin-bottom"
-            >
-              <i className="fa fa-paper-plane w3-margin-right" />
-              Send Message
-            </button>
-          </form>
-        </div>
+        <Contact />
         {/* Footer */}
-        <footer className="w3-container w3-padding-32 w3-dark-grey">
-          <div className="w3-row-padding">
-            <div className="w3-third">
-              <h3>FOOTER</h3>
-              <p>
-                Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
-                condimentum, porta lectus vitae, ultricies congue gravida diam
-                non fringilla.
-              </p>
-              <p>
-                Powered by{" "}
-                <a
-                  href="https://www.w3schools.com/w3css/default.asp"
-                  target="_blank"
-                >
-                  w3.css
-                </a>
-              </p>
-            </div>
-            <div className="w3-third">
-              <h3>BLOG POSTS</h3>
-              <ul className="w3-ul w3-hoverable">
-                <li className="w3-padding-16">
-                  <img
-                    src="https://www.w3schools.com/w3images/workshop.jpg"
-                    className="w3-left w3-margin-right"
-                    style={{ width: 50 }}
-                  />
-                  <span className="w3-large">Lorem</span>
-                  <br />
-                  <span>Sed mattis nunc</span>
-                </li>
-                <li className="w3-padding-16">
-                  <img
-                    src="https://www.w3schools.com/w3images/gondol.jpg"
-                    className="w3-left w3-margin-right"
-                    style={{ width: 50 }}
-                  />
-                  <span className="w3-large">Ipsum</span>
-                  <br />
-                  <span>Praes tinci sed</span>
-                </li>
-              </ul>
-            </div>
-            <div className="w3-third">
-              <h3>POPULAR TAGS</h3>
-              <p>
-                <span className="w3-tag w3-black w3-margin-bottom">Travel</span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  New York
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  London
-                </span>
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  IKEA
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  NORWAY
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  DIY
-                </span>
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  Ideas
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  Baby
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  Family
-                </span>
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  News
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  Clothing
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  Shopping
-                </span>
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  Sports
-                </span>{" "}
-                <span className="w3-tag w3-grey w3-small w3-margin-bottom">
-                  Games
-                </span>
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
         <div className="w3-black w3-center w3-padding-24">
           Made with{" "}
           <a
